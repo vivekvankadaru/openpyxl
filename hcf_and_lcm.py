@@ -19,6 +19,18 @@ def hcf(l):
             else:
                 d1=d1.intersection(d[keylist[keylist.index(i)+1]])
     print("The GCD of numbers given is " + str(max(d1)))
+def lcm(l):
+    greatr_r=max(l)
+    greater=max(l)
+    l1=[]
+    for i in [x for x in l if x!=greater]:
+        while True:
+            if int(greater%i)==0 and int(greater%greatr_r)==0:
+                l1.append(greater)
+                break
+            greater+=1
+    print(max(l1))
+            
 list1=[int(x) for x in input('Enter numbers sep by , ').split(',')]
 hcf(list1)
-#lcm(list1)
+lcm(list1)
